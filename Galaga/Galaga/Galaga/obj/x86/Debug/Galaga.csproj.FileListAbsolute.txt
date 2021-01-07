@@ -15,3 +15,4 @@ C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga.exe
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga.pdb
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\galaga.xnb

@@ -19,8 +19,13 @@ namespace Galaga
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Rectangle background;
+        Rectangle name;
+        Texture2D galagaNameArt;
         Texture2D space;
-
+        bool mainmenu;
+        bool oneplayer;
+        bool twoplayer;
+        bool highscore;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -40,6 +45,11 @@ namespace Galaga
         {
             // TODO: Add your initialization logic here
             background = new Rectangle(0,0,GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+            name = new Rectangle(GraphicsDevice.Viewport.Width/2 - 160, 100,320,179);
+            mainmenu = true;
+            oneplayer = false;
+            twoplayer = false;
+            highscore = false;
             base.Initialize();
         }
 
@@ -52,6 +62,7 @@ namespace Galaga
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             space = this.Content.Load<Texture2D>("space");
+            galagaNameArt = this.Content.Load<Texture2D>("galaga");
             // TODO: use this.Content to load your game content here
         }
 
@@ -91,6 +102,10 @@ namespace Galaga
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             spriteBatch.Draw(space,background,Color.White);
+            if(mainmenu)
+            {
+                spriteBatch.Draw(galagaNameArt, name, Color.White);
+            }
             spriteBatch.End();
             base.Draw(gameTime);
         }
