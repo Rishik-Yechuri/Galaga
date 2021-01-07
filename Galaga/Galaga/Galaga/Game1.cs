@@ -18,11 +18,16 @@ namespace Galaga
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Rectangle background;
+        Texture2D space;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 640;  // set this value to the desired width of your window
+            graphics.PreferredBackBufferHeight = 480;   // set this value to the desired height of your window
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -34,7 +39,7 @@ namespace Galaga
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            background = new Rectangle(0,0,GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
             base.Initialize();
         }
 
@@ -46,7 +51,7 @@ namespace Galaga
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            space = this.Content.Load<Texture2D>("space");
             // TODO: use this.Content to load your game content here
         }
 
@@ -84,7 +89,9 @@ namespace Galaga
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
+            spriteBatch.Draw(space,background,Color.White);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

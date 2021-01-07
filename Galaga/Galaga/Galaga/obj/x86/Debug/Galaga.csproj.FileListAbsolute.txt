@@ -1,0 +1,17 @@
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\space.xnb
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Galaga.exe
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Galaga.pdb
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga.csprojResolveAssemblyReference.cache
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga.exe
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga.pdb
