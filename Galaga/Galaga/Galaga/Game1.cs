@@ -20,12 +20,17 @@ namespace Galaga
         SpriteBatch spriteBatch;
         Rectangle background;
         Rectangle name;
+        Rectangle arrow;
         Texture2D galagaNameArt;
         Texture2D space;
+        Texture2D pointer;
+        SpriteFont homefont;
+        KeyboardState old;
         bool mainmenu;
         bool oneplayer;
         bool twoplayer;
         bool highscore;
+        Vector2 arrowPos;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -46,10 +51,13 @@ namespace Galaga
             // TODO: Add your initialization logic here
             background = new Rectangle(0,0,GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
             name = new Rectangle(GraphicsDevice.Viewport.Width/2 - 160, 100,320,179);
+            arrow = new Rectangle(name.X+50,name.Y+200,25,25);
+            arrowPos = new Vector2(arrow.X,arrow.Y);
             mainmenu = true;
             oneplayer = false;
             twoplayer = false;
             highscore = false;
+            old = Keyboard.GetState();
             base.Initialize();
         }
 
@@ -63,6 +71,8 @@ namespace Galaga
             spriteBatch = new SpriteBatch(GraphicsDevice);
             space = this.Content.Load<Texture2D>("space");
             galagaNameArt = this.Content.Load<Texture2D>("galaga");
+            pointer = this.Content.Load<Texture2D>("Pointer");
+            homefont = this.Content.Load<SpriteFont>("HomePlayerSelection");
             // TODO: use this.Content to load your game content here
         }
 
@@ -82,12 +92,27 @@ namespace Galaga
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            KeyboardState kb = Keyboard.GetState();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            if(kb.IsKeyDown(Keys.Down) && !old.IsKeyDown(Keys.Down))
+            {
+                if (arrow.Y == arrowPos.Y)
+                    arrow.Y += 50;
+                else
+                    arrow.Y = (int)arrowPos.Y;
+            }
+            if (kb.IsKeyDown(Keys.Up) && !old.IsKeyDown(Keys.Up))
+            {
+                if (arrow.Y == arrowPos.Y)
+                    arrow.Y += 50;
+                else
+                    arrow.Y = (int)arrowPos.Y;
+            }
+            old = kb;
             base.Update(gameTime);
         }
 
@@ -105,6 +130,9 @@ namespace Galaga
             if(mainmenu)
             {
                 spriteBatch.Draw(galagaNameArt, name, Color.White);
+                spriteBatch.Draw(pointer,arrow,Color.White);
+                spriteBatch.DrawString(homefont,"One Player",new Vector2(arrowPos.X + 50,arrowPos.Y), Color.White);
+                spriteBatch.DrawString(homefont, "Two Player", new Vector2(arrowPos.X + 50, arrowPos.Y + 50), Color.White);
             }
             spriteBatch.End();
             base.Draw(gameTime);

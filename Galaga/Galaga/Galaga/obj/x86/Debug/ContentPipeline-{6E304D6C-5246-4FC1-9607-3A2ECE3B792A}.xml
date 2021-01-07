@@ -19,6 +19,24 @@
       <Output>C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\galaga.xnb</Output>
       <Time>2021-01-07T11:43:24.5006803-06:00</Time>
     </Item>
+    <Item>
+      <Source>Pointer.png</Source>
+      <Name>Pointer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\Pointer.xnb</Output>
+      <Time>2021-01-07T11:53:21.0732347-06:00</Time>
+    </Item>
+    <Item>
+      <Source>HomePlayerSelection.spritefont</Source>
+      <Name>HomePlayerSelection</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\HomePlayerSelection.xnb</Output>
+      <Time>2021-01-07T11:54:55.4446723-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{6E304D6C-5246-4FC1-9607-3A2ECE3B792A}</ContentProjectGUID>
