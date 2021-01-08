@@ -18,3 +18,4 @@ C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\obj\x86\Debug\Galaga
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\galaga.xnb
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\Pointer.xnb
 C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\HomePlayerSelection.xnb
+C:\Users\nihal\Documents\GitHub\Galaga\Galaga\Galaga\Galaga\bin\x86\Debug\Content\high.txt

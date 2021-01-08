@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.IO;
 
 namespace Galaga
 {
@@ -31,6 +32,7 @@ namespace Galaga
         bool twoplayer;
         bool highscore;
         Vector2 arrowPos;
+        int highscoreNum;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -73,6 +75,7 @@ namespace Galaga
             galagaNameArt = this.Content.Load<Texture2D>("galaga");
             pointer = this.Content.Load<Texture2D>("Pointer");
             homefont = this.Content.Load<SpriteFont>("HomePlayerSelection");
+            highscoreNum = ReadFileOfIntegers(@"Content/high.txt");
             // TODO: use this.Content to load your game content here
         }
 
@@ -80,6 +83,26 @@ namespace Galaga
         /// UnloadContent will be called once per game and is the place to unload
         /// all content.
         /// </summary>
+        private int ReadFileOfIntegers(string path)
+        {
+            string line = "";
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    while(!reader.EndOfStream)
+                    {
+                        line = reader.ReadLine();
+                        
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                return 1;
+            }
+            return Convert.ToInt32(line);
+        }
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
@@ -133,6 +156,8 @@ namespace Galaga
                 spriteBatch.Draw(pointer,arrow,Color.White);
                 spriteBatch.DrawString(homefont,"One Player",new Vector2(arrowPos.X + 50,arrowPos.Y), Color.White);
                 spriteBatch.DrawString(homefont, "Two Player", new Vector2(arrowPos.X + 50, arrowPos.Y + 50), Color.White);
+                spriteBatch.DrawString(homefont,"High Score: " , new Vector2(250,10), Color.Red);
+                spriteBatch.DrawString(homefont,  highscoreNum.ToString(), new Vector2(375, 10), Color.White);
             }
             spriteBatch.End();
             base.Draw(gameTime);
