@@ -152,6 +152,7 @@ namespace Galaga
                 }
                 playerXLocs[0] = 30;
             }
+            //The left right controls for both players
             if (kb.IsKeyDown(Keys.A)) {
                 playerXLocs[0] = playerXLocs[0] - 3;
             }
@@ -184,6 +185,7 @@ namespace Galaga
             spriteBatch.Draw(space,background,Color.White);
             if(mainmenu)
             {
+                //Draws the home screen if the player hasn't started a game
                 if (homeScreen)
                 {
                     spriteBatch.Draw(galagaNameArt, name, Color.White);
@@ -193,10 +195,15 @@ namespace Galaga
                     spriteBatch.DrawString(homefont, "High Score: ", new Vector2(250, 10), Color.Red);
                     spriteBatch.DrawString(homefont, highscoreNum.ToString(), new Vector2(375, 10), Color.White);
                 }
+                //Otherwise draws the game
                 else {
-                    for (int x=0;x<playerXLocs.Count();x++) {
+                    for (int x=0;x<playerXLocs.GetLength(0);x++) {
                         Rectangle shipRectangle = new Rectangle(playerXLocs[x], 400, 50, 50);
-                        spriteBatch.Draw(spaceShipTexture,shipRectangle,Color.White);
+                        Texture2D tempShipTexture = spaceShipTexture;
+                        if (x==1) {
+                            tempShipTexture = spaceShip2Texture;
+                        }
+                        spriteBatch.Draw(tempShipTexture,shipRectangle,Color.White);
                     }
                 }
             }
